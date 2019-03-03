@@ -511,7 +511,7 @@ window.onload = () => {
             let yes = false;
             let incomHour = 0;
             let outHour = 0;
-            let incomeMin = 0;
+            let incomMin = 0;
             let outMin = 0;
             while (!yes) {
                 let incom = prompt("Etner arrival time:", "00:00");
