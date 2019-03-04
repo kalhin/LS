@@ -333,6 +333,7 @@ const tasks = {
                 }
             }
         }
+        //arr = arr.sort((x,y) => x.length - y.length); //simple way
         return 'Original array:\n' + origin + '\nSorted array of strings by length\n' + arr;
     },
     task34: function (arr = [1, 2, 0, 4, 0, 0, 7, 8]) {
