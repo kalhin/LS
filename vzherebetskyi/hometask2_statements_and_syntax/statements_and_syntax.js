@@ -36,7 +36,7 @@ class DumbMap {
 
 //----------------------------------------------------------------------------
 
-hometask2 = {
+let hometask2 = {
     
     task1(array, testValue) {
        let trigger = 0; 
