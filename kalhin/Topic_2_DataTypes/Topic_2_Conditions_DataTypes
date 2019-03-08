@@ -1,0 +1,225 @@
+i1. Write a Javascript program to get the Javascript version with patch number.
+Sample Output: 
+        1. Javascript Version: 2.4.2
+        2. Javascript Patch Level: 198
+
+2. Write a Javascript program to display the current date and time.
+
+Sample Output: 
+Current Date and Time: 27/12/2017 06:04
+
+3. Write a Javascript program to create a new string which is n copies of a given string where n is a non-negative integer.
+
+Sample Output: 
+a
+aa
+aaa
+aaaa
+aaaaa
+
+4. Write a Javascript program which accepts the radius of a circle from the user and compute the parameter and area.
+Sample Output: 
+Input the radius of the circle: 5.
+The perimeter is 31.41592653.
+The area is 78.539816325.
+
+5. Write a Javascript program to check if a string starts with "if".
+Sample Output:
+true
+false
+
+6. Write a Javascript program which accepts the user's first and last name and print them in reverse order with a space between them. 
+ Sample Output: 
+Input your first name: 
+Input your last name: 
+Hello Lanoie Gary
+
+7. Write a Javascript program to accept a filename from the user to print the extension of that. (With Regexp) 
+Sample Output: 
+Filename: test.rb
+Base name: test
+Extension: .rb
+Pathname: /user/system
+
+8. Write a Javascript program to check three numbers and return true if one or more of them are small. A number is called "small" if it is in the range 1..10 inclusive. 
+Sample Output: 
+true
+true
+false
+
+9. Write a Javascript program to check two numbers and return true if one or the other is small, but not both. A number is called "small" if it is in the range 1..10 inclusive.  
+Sample Output: 
+true
+true
+false
+
+10. Write a Javascript program to print the following 'here document'.  
+Sample string:  a string that you "don't" have to escape This is a ....... multi-line heredoc string --------> example
+Sample Output:
+
+Sample string :
+a string that you "don't" have to escape
+This
+is a ....... multi-line
+heredoc string --------> example
+
+11. Write a Javascript program to create a new string where "if" is added to the front of a given string. If the string already begins with "if", return the string unchanged. 
+ Sample Output: 
+if else
+if else
+
+12. Write a Javascript program to create a new string from a given string using the first three characters or whatever is there if the string is less than length 3. Return n copies of the string. 
+ Sample Output:
+abc
+abcabc
+abc
+abcabc
+abc
+abab
+
+13. Write a Javascript program which accepts the radius of the sphere as input and compute the volume.
+ Sample Output:
+Input the radius of the circle: 5
+The volume of the sphere is: 392.699081625.
+
+14. Write a Javascript program to create a new string from a given string where the first and last characters have been exchanged. 
+ Sample Output: 
+nythoP
+aavJ
+
+15. Write a Javascript program to check two integers and return true if one of them is 20 otherwise return their sum.  
+16. Write a Javascript program to find the greatest of three numbers.  
+Sample Output: 
+y = 5 is greatest.
+
+17. Write a Javascript program to check if a number is within 10 of 100 or 200. (E.g. 90, 110, 190, 210) 
+18. Write a Javascript program to compute the sum of the two integers, if the two values are equal return double their sum otherwise return their sum. 
+Sample Output: 
+20
+9
+
+19. Write a Javascript program to print "Javascript Basic Exercises" 9 times. 
+Sample Output: 
+Javascript exercises
+Javascript exercises
+Javascript exercises
+Javascript exercises
+Javascript exercises
+Javascript exercises
+Javascript exercises
+Javascript exercises
+Javascript exercises
+
+20. Write a Javascript program to create a new string from a given string with the last character added at the front and back of the given string. The length of the given string must be 1 or more.  
+Sample Output: 
+cabcc
+dabcdd
+ajavaa
+
+21. Write a Javascript program to print 34 upto 41.  
+Sample Output: 
+34
+35
+36
+37
+38
+39
+40
+41
+42
+
+22. Write a Javascript program to print even numbers from 1 to 10. 
+ Sample Output: 
+Even numbers between 2 to 10: 
+2
+4
+6
+8
+10
+
+23. Write a Javascript program to print odd numbers from 10 to 1.  
+Sample Output: 
+Odd numbers between 9 to 1: 
+9
+7
+5
+3
+1
+
+24. Write a Javascript program to print the elements of a given array.  Sample array : ["Javascript", 2.3, Time.now] 
+25. Write a Javascript program to check two non-negative integer values and return true if they have the same last digit. 
+26. Write a Javascript program to retrieve the total marks where the subject name and marks of a student stored in a hash. 
+Sample subject and marks: Literature -74, Science – 89, Math-91 
+Sample Output: 
+Total Marks: 254
+
+27. Write a Javascript program to print a specified character twenty times. 
+Sample Output: 
+********************
+####################
+@@@@@@@@@@@@@@@@@@@@
+
+28. Write a Javascript program to test whether a year is a leap year or not.  
+Sample Output: 
+2012 is leap year
+1500 is not leap year
+1600 is leap year
+2020 is leap year
+
+29. Write a Javascript program to check whether a string 'Java' appears at index 1 in a given string, if 'Java' appears to return the string without 'Java' otherwise return the string unchanged.  
+Sample Output: 
+Script
+Oldjava
+
+30. Write a Javascript program to create a string using the first two characters (if present) of a given string if the first character is 'p' and the second one is 's' otherwise return a blank string. 
+ Sample Output: 
+ps
+
+31. Write a Javascript program to check two integers and return whichever value is nearest to the value 10, or return 0 if two integers are equal.  
+Sample Output: 
+7
+9
+0
+
+32. Write a Javascript program to check two integer values and return true if they are both in the range 10..20 inclusive, or they are both in the range 20..30 inclusive.  
+Sample Output: 
+true
+false
+true
+false
+
+33. Write a Javascript program to check two positive integer values and return the larger value that is in the range 20..30 inclusive, or return 0 if no number is in that range. 
+Sample Output: 
+0
+29
+30
+0
+
+34. Write a Javascript program to count the number of 5's in a given array.  
+Sample Output: 
+0
+1
+2
+
+35. Write a Javascript program to check two non-negative integer values and return true if they have the same last digit. 
+36. Write a Javascript program to check if the sequence of numbers 10, 20, 30 appears anywhere in a given array of integers.  
+37. Write a Javascript program to check two given integers and return 11 if either one is 11. Return their sum or difference if sum or difference is 11. 
+38. Write a Javascript program to check three given integers and return true if one of them is 20 or more less than one of the others. 
+39. Write a Javascript program to check two given integers and return the larger value. However, if the two values have the same remainder when divided by 5 then return the smaller value and if the two values are the same, return 0. 
+Sample Output: 
+12
+110
+0
+
+40. Write a Javascript program to check two given integers, each in the range 10..99, return true if there is a digit that appears in both numbers.  
+41. Write a Javascript program to check three given integers x, y, z and return true if one of y or z is close (differing from a by at most 1), while the other is far, differing from both other values by 3 or more. 
+42. На зустріч один одному відповідно з міста А та міста Б рухається заєць та черепаха. Ввести з клавіатури відстань між містами, швидкість зайця та швидкість черепахи. Обчислити на якій відстані від міста Б вони зустрінуться.
+43. З міста А в місто Б їде велосипедист. З його плеча злітає муха. Вона летить до міста Б, долітає до нього та повертається назад. Знову долітає до велосипедиста, розвертається і летить до міста Б... і так до тих пір, поки велосипедист не доїде до пункту Б. Відомо відстань між містами, швидкість велосипедиста та швидкість мухи. Написати програму, що визначає скільки кілометрів налітає муха.
+44.Написати програму, яка визначає дату наступного дня, на основі сьогоднішньої дати.
+45. Написати программу, яка задає категорію та стаж працівника, а також ставку відповідно до категорії(1-ша категорія—3000, 2-га – 2000, 3-тя -- 1000). Обчислити заробітну плату, враховуючи надбавку за стаж роботи(до 2 років—0%, від 2 до 5 – 10%, від 5 до 10 – 20%, більше 10—30% ) і зняття податку – 15%.
+46. Написати програму, яка із введеного користувачем цілого чотирьохзначного числа (наприклад 5141):
+    1. знаходить суму цифр цього числа (5141 це 5+1+4+1 = 11).
+    2. перевіряє чи є однакові цифри (двічі зустрічається цифра 1)
+    3. перевіряє чи сума двох перших цифр чотирьохзначного числа рівна двом наступним (5141 → 5+1 = 6 і 4+1 = 5 → суми першої та другої пар цифр даного числа різні)
+47. Написати програму, яка обчислює, скільки повинен заплатити водій за паркування автомобіля на стоянці протягом певного часу. Користувач вводить наступні дані: час заїзду на стоянку (у годинах і хвилинах), час від’їзду, вартість однієї години паркування. Водій платить за кожну повну годину. Також, здійснюється плата за перевищення користування стоянкою більше ніж на 10 хв., наприклад: якщо хтось використав стоянку протягом 2 год. і 15 хв., то повинен заплатити за 3 год. В кінцевому результаті на екран необхідно вивести повідомлення про час заїзду та виїзду авто, ціну за годину паркування і повну вартість.
+
