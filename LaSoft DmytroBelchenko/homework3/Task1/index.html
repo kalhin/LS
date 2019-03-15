@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="student.js"></script>
+    <script src="group.js"></script>
+    <script src="groups.js"></script>
+    <script src="libruary.js"></script>
+    <script src="hostel.js"></script>
+    <script src="rewrite.js"></script>
+    <script src="main.js"></script>
+    <title>Students table</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <section class="controls">
+            <input type="text" placeholder="Enter Groupe ID" id="grpIdInput">
+            <input type="text" placeholder="Enter Older Stud tick N" id="olderInput">
+            <article class="groupe_controls">
+                <select name="groups" id="groupe_select">
+                </select>
+
+                <button class="btns" id="add_group">Add Groupe</button>
+                <button class="btns" id="set_older">Set Older</button>
+                <button class="btns" id="delete_group">Delete Groupe</button>
+            </article>
+
+            <article class="student_controls">
+                <label for="firstNameInput">First name</label>
+                <input type="text" placeholder="First Name" id="firstNameInput">
+                <label for="LastNameInput">Last name</label>
+                <input type="text" placeholder="Last Name" id="LastNameInput">
+                <label for="patronymInput">Patronym</label>
+                <input type="text" placeholder="patronym" id="patronymInput">
+                <label for="sex">sex</label>
+                <input type="text" placeholder="sex(male/female)" id="sexInput">
+                <label for="birthDateInput">Birth Date</label>
+                <input type="text" placeholder="birth Date(dd.mm.yyyy)" id="birthDateInput">
+                <label for="birthPlaceInput">Birth Place</label>
+                <input type="text" placeholder="birth Place" id="birthPlaceInput">
+                <label for="familyInput">family</label>
+                <input type="text" placeholder="family(married/not married)" id="familyInput">
+                <label for=" hobbyInput"> hobby</label>
+                <input type="text" placeholder="hobby" id="hobbyInput">
+                <button id="AddStudent">Add Student</button>
+            </article>
+        </section>
+
+        <table class="studentsTable">
+            <tr class="table_head">
+                <th>ID №</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>patronyme</th>
+                <th>sex</th>
+                <th>birthDate</th>
+                <th>birthPlace</th>
+                <th>family</th>
+                <th>studTickNum</th>
+                <th>sholship</th>
+                <th>rating</th>
+                <th>hobby</th>
+                <th>Delete</th>
+            </tr>
+        </table>
+
+
+
+        <div class="id_out">
+
+        </div>
+
+    </div>
+    <div id="wrap_extend">
+        <div class="inform_res">
+
+        </div>
+        <div class="inform_req">
+            <div class="rate">
+                <input type="text" placeholder="Rating min" id="min_rate">
+                <input type="text" placeholder="Rating max" id="max_rate">
+                <button id="get_list">Get list</button>
+            </div>
+            <div class="refer">
+                <input type="text" placeholder="studID" id="ref">
+                <button id="get_refer">Get refer</button>
+            </div>
+            <div class="lib_debt">
+                <button id="lib_debt">Get libruary debtors</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

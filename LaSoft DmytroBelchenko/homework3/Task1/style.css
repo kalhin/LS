@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    display:flex;
+    flex-wrap: wrap;
+}
+#wrapper .controls{
+    display:flex;
+    flex-direction: column;
+    margin-top:10px;
+    width:281px;
+
+}
+#wrapper .controls .groupe_controls{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+
+}
+#wrapper .controls .groupe_controls button{
+    margin-left:10px;
+}
+#wrapper .controls .student_controls{
+    display:flex;
+    flex-direction: column;
+    margin-left:20px;
+    margin-top: 10px;
+
+}
+#wrapper .controls .student_controls input{
+    margin-bottom: 10px;
+}
+
+#wrapper .studentInput input{
+    margin-bottom:10px;
+}
+#wrapper .studentsTable{
+    border-collapse: collapse;
+    margin-top:20px;
+    margin-left: 20px;
+}
+#wrapper .studentsTable th{
+    border:1px solid black;
+    text-align: center;
+    padding:5px;
+}
+#wrapper .studentsTable td{
+    border:1px solid black;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#wrapper .studentsTable tr{
+    border:1px solid black;
+}
+#wrapper .studentsTable button{
+    margin: 5px;
+}
+#wrapper #grpIdInput, #olderInput{
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#wrapper .id_out{
+    width:200px;
+    height: 100px;
+    font-size: 25px;
+    font-weight: bold;
+    border:2px solid black;
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+
+}
+#wrap_extend{
+    display:flex;
+    flex-direction: column;
+    margin-top:25px;
+    margin-bottom: 20px;
+}
+#wrap_extend .inform_res{
+    width: 90%;
+    min-height: 200px;
+    margin:15px auto;
+    border:2px solid black;
+}
+#wrap_extend .inform_req{
+    display:flex;
+    flex-wrap: nowrap;
+    margin:0 auto;
+}
+#wrap_extend .inform_req div{
+    display:flex;
+    flex-direction: column;
+    margin-left:10px;
+    
+}
+#wrap_extend .inform_req div input{
+    margin-bottom:10px;
+    height: 25px;
+}
