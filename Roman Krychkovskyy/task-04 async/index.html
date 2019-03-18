@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HW-04</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+</head>
+
+<body>
+    <form action="">
+        <h1>Custom User Form</h1>
+        <label class="container">Get a single post
+            <input type="radio" checked="checked" name="radio" id='one' onclick=foo()>
+            <span class="checkmark"></span>
+        </label>
+        <label class="range-block">
+            <input type="number" id="range" min="1" max="100" value="1">
+            <span id="error"></span>
+        </label>
+        <label class="container">Get all posts
+            <input type="radio" name="radio" id='all' onclick=foo()>
+            <span class="checkmark"></span>
+        </label>
+        <button id="button" type="button">
+            Submit
+        </button>
+        <button id="clear" type="button">
+            Clear
+        </button>
+    </form>
+    <ul id="list"></ul>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
