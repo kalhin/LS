@@ -212,7 +212,7 @@ class Faculty {
             console.log(`enter student card`)
             return `enter student card`;
         }
-        let student = this.students.filter((item) => item.numberOfStudentCard === numberCard)[0];
+        let {student} = this.students.filter((item) => item.numberOfStudentCard === numberCard);
         console.log(`Information about student: \nfull name: ${student.firstName} ${student.lastName}\nrating: ${student.rating}\nscholarships: ${student.scholarships} grn`);
     }
 }
