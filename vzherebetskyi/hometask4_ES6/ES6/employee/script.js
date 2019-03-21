@@ -1,0 +1,15 @@
+let employee1 = new Employee('Ivanov', 'Volodymyr');
+let employee2 = new Employee("Doe", "John");
+let employee3 = new Employee("De Niro", "Robert");
+let employee4 = new Employee("Deppo", "John");
+let employee5 = new Employee("Deppa", "Johnan");
+let employee6 = new Employee("Pirate", "Braddoos");
+let employee7 = new Employee("Parkur", "Peter");
+let employee8 = new Employee("Banneroo", "Bruceeev");
+let employee9 = new Employee("Murdock", "Matt");
+let employee10 = new Employee("ilban", "Edris");
+let employee11 = new Employee("Molinack", "Peter");
+Employee.report4();
+Employee.report1();
+employee5.setVacation();
+console.log(company);
