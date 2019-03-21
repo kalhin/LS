@@ -1,4 +1,3 @@
-//-----------------------Single radio button is checked-------------------------------------
 console.log('working!');
 
 let rad = document.formA.choice;
