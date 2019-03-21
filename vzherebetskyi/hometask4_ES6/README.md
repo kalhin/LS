@@ -1,3 +1,3 @@
-Hometask 3: Functions Classes Exceptions & Modules
+Hometask 4: ES6
 =====================================================
 This time no special instructions.
