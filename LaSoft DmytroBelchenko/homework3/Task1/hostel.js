@@ -30,8 +30,8 @@ Hostel.prototype.getRooms = function(){
 }
 Hostel.prototype.createRoom = function(rumNum){
     this.roomNumber = rumNum||this.rooms.length+1;
-    this.room = new Room(this.roomNumber);
-    this.rooms.push(this.room);
+    //this.room =;
+    this.rooms.push( new Room(this.roomNumber));
 }
 
 

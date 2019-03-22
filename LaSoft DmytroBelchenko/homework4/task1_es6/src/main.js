@@ -1,14 +1,23 @@
-window.onload = function () {
-    var renew = new ReTable();
-    var univers = new AllGroups();
-    var hostel = new Hostel();
-    var libruary = new Libruary();
-    var addGrpBtn = document.querySelector(' #wrapper #add_group');
-    var delGrpBtn = document.querySelector("#wrapper #delete_group");
-    var selected = document.querySelector("#wrapper .controls .groupe_controls #groupe_select");
-    var tableToClick = document.querySelector("#wrapper .studentsTable");
-    var groupeToWrite = 0;
-    var groupeIndex = document.querySelector("#wrapper .id_out");
+window.onload = () => {
+
+/////////////////////////////////////////////////INITS/////////////////////////////////////////
+
+    let renew = new ReTable();
+    let univers = new AllGroups();
+    let hostel = new Hostel();
+    let libruary = new Libruary();
+    let addGrpBtn = document.querySelector(' #wrapper #add_group');
+    let delGrpBtn = document.querySelector("#wrapper #delete_group");
+    let selected = document.querySelector("#wrapper .controls .groupe_controls #groupe_select");
+    let tableToClick = document.querySelector("#wrapper .studentsTable");
+    let groupeToWrite = 0;
+    let bc = 0;
+    let groupeIndex = document.querySelector("#wrapper .id_out");
+    const prevOlder = document.querySelector("#olderInput");
+    const prevX = document.querySelector("#min_rate");
+    const prevY = document.querySelector("#max_rate");
+    const out = document.querySelector(".inform_res");
+    const prevRef = document.querySelector("#ref");
 
     libruary.loadBook("drama", "king", "fog", 30, 0);
     libruary.loadBook("drama", "king", "light", 40, 0);
@@ -20,65 +29,69 @@ window.onload = function () {
     libruary.loadBook("fantasy", "tolkin", "shmobit", 70, 0);
     libruary.loadBook("fantasy", "tolkin", "rings", 55, 0);
     libruary.loadBook("fantasy", "tolkin", "elves", 90, 0);
-
     hostel.createRoom();
 
-    var learningProcess = function () {
-        univers.groupsArr.forEach(function (el) {
-            var coeff = 0;
-            for (var key in el.lessonTicher) {
+
+////////////////////////////////////////////////////////////RUN FUNCTIONS//////////////////////////////////////////////////////////////////
+ 
+let learningProcess = () => {
+        univers.groupsArr.forEach((el) => {
+            let coeff = 0;
+            for (let key in el.lessonTicher) {
                 coeff += el.lessonTicher[key].length;
             }
-            el.students.forEach(function (st) {
+            el.students.forEach((st) => {
                 st.rating = Math.round(coeff * (Math.random())) / 10;
             })
         });
     }
-    var createSubj = function () {
-        var subjs = [
+    let createSubj = () => {
+        const subjs = [
             ["math", "orlinsky"],
             ["liter", "pushkin"],
             ["phisics", "nuton"],
             ["chem", "mendeleev"],
             ["phiscult", "bubka"]
         ]
-        var rand = 0 + Math.random() * 5;
+        let rand = 0 + Math.random() * 5;
         rand = Math.floor(rand);
         return subjs[rand];
     }
 
     // TODO: Rewrite this method
-    var obshyagaIn = function (studId) {
-        var full = hostel.rooms[hostel.rooms.length - 1].setResident(studId);
+    let obshyagaIn = (studId) => {
+        let full = hostel.rooms[hostel.rooms.length - 1].setResident(studId);
         if (full === "full") {
-            hostel.createRoom()
+            hostel.createRoom();
+            hostel.rooms[hostel.rooms.length - 1].setResident(studId);
             full = null;
         }
 
     }
 
-    var scholarship = function (studId) {
-        var stud = null;
-        for (var s = 0; s < univers.groupsArr.length; s++) {
-            stud = univers.groupsArr[s].students.find(function (el) {
+    let scholarship = (studId) => {
+        let stud = null;
+        for (let s = 0; s < univers.groupsArr.length; s++) {
+            stud = univers.groupsArr[s].students.find((el) => {
                 return el.studTickNum == studId;
             })
             if (stud) {
                 break;
             }
         }
+       
         if (!stud) {
-            var err = new Error("INVALID ID");
+            let err = new Error("INVALID ID");
             err.status = "SEARCH_ERR";
             throw err;
         }
         stud.sholship = Math.round(500 * stud.rating);
         return stud;
     }
-    var ratingXY = function (x, y) {
-        var ex = [];
-        for (var p = 0; p < univers.groupsArr.length; p++) {
-            univers.groupsArr[p].students.forEach(function (el) {
+    let ratingXY = (x, y) => {
+        let ex = [];
+        for (let p = 0; p < univers.groupsArr.length; p++) {
+            univers.groupsArr[p].students.forEach((el) => {
 
                 if ((el.rating >= x) && (el.rating <= y)) {
 
@@ -89,20 +102,32 @@ window.onload = function () {
         }
         return ex;
     }
-    var genStudTick = function () {
+    let genStudTick = () => {
         return Math.floor(Math.random() * 10000);
     }
 
     univers.addGroup();
-    for (var temp = 0; temp <= 4; temp++) {
-        var prep = createSubj();
+    for (let temp = 0; temp <= 4; temp++) {
+        let prep = createSubj();
         univers.groupsArr[groupeToWrite].addSubj(prep[0], prep[1]);
     }
     renew.optionsWrite(univers.groupsArr);
     groupeIndex.innerHTML = "GroupeID: " + univers.groupsArr[groupeToWrite].groupNumber;
-    // console.log(univers.groupsArr[groupeToWrite].lessonTicher)
 
-    selected.onclick = function (elem) {
+    let booksToStudents = () => {
+        libruary.readers.forEach(function (elem, i) {
+            let year = 2017;
+            let giv = libruary.bookToRent(bc, i, `${year + 1}.10.05`);
+            if (giv !== "n/a" && bc < libruary.books.length) {
+                bc++;
+            }
+            else {
+                bc = 0;
+            }
+        })
+    }
+/////////////////////////////////////////////////HANDLING///////////////////////////////////////////////////
+    selected.onclick = (elem) => {
         groupeToWrite = elem.target.selectedIndex;
         renew.clearTable();
         renew.tableWrite(univers.groupsArr, groupeToWrite);
@@ -110,17 +135,17 @@ window.onload = function () {
         groupeIndex.innerHTML = "GroupeID: " + univers.groupsArr[groupeToWrite].groupNumber;
     }
 
-    addGrpBtn.onclick = function () {
-        var grpN = document.querySelector("#wrapper #grpIdInput");
-        var enter = grpN.value;
+    addGrpBtn.onclick = () => {
+        const grpN = document.querySelector("#wrapper #grpIdInput");
+        let enter = grpN.value;
         univers.addGroup(enter);
         grpN.value = "";
         renew.clearOption();
         renew.optionsWrite(univers.groupsArr);
     }
 
-    delGrpBtn.onclick = function () {
-        var delIndex = groupeToWrite;
+    delGrpBtn.onclick = () => {
+        let delIndex = groupeToWrite;
         univers.delGroup(delIndex);
         renew.clearOption();
         renew.optionsWrite(univers.groupsArr);
@@ -130,25 +155,25 @@ window.onload = function () {
         groupeIndex.innerHTML = "";
         groupeIndex.innerHTML = "GroupeID №: " + univers.groupsArr[groupeToWrite].groupNumber;
     }
-    AddStudent.onclick = function () {
-        var prevFirstName = document.querySelector("#firstNameInput");
-        var name = prevFirstName.value;
-        var prevLastName = document.querySelector("#LastNameInput");
-        var surname = prevLastName.value;
-        var prevPatronym = document.querySelector("#patronymInput");
-        var patronyme = prevPatronym.value;
-        var prevSex = document.querySelector("#sexInput");
-        var sex = prevSex.value;
-        var prevBirthDate = document.querySelector("#birthDateInput");
-        var birthDate = prevBirthDate.value;
-        var prevBirthPlace = document.querySelector("#birthPlaceInput");
-        var birthPlace = prevBirthPlace.value;
-        var prevFamily = document.querySelector("#familyInput");
-        var family = prevFamily.value;
-        var prevHobby = document.querySelector("#hobbyInput");
-        var hobby = prevHobby.value;
-        var tickNum = genStudTick();
-        var rating = 0;
+    AddStudent.onclick = () => {
+        const prevFirstName = document.querySelector("#firstNameInput");
+        let name = prevFirstName.value;
+        const prevLastName = document.querySelector("#LastNameInput");
+        let surname = prevLastName.value;
+        const prevPatronym = document.querySelector("#patronymInput");
+        let patronyme = prevPatronym.value;
+        const prevSex = document.querySelector("#sexInput");
+        let sex = prevSex.value;
+        const prevBirthDate = document.querySelector("#birthDateInput");
+        let birthDate = prevBirthDate.value;
+        const prevBirthPlace = document.querySelector("#birthPlaceInput");
+        let birthPlace = prevBirthPlace.value;
+        const prevFamily = document.querySelector("#familyInput");
+        let family = prevFamily.value;
+        const prevHobby = document.querySelector("#hobbyInput");
+        let hobby = prevHobby.value;
+        let tickNum = genStudTick();
+        let rating = 0;
         try {
             univers.groupsArr[groupeToWrite].createStudent(name, surname, patronyme, tickNum, birthDate, birthPlace, family, sex, hobby, rating);
             learningProcess();
@@ -208,7 +233,7 @@ window.onload = function () {
 
     }
 
-    tableToClick.onclick = function (elem) {
+    tableToClick.onclick = (elem) => {
 
         let btnID = elem.target.className;
         let idArr = btnID.split("_");
@@ -221,13 +246,13 @@ window.onload = function () {
         }
     }
 
-    var prevOlder = document.querySelector("#olderInput");
 
-    set_older.onclick = function () {
+    set_older.onclick = () => {
 
-        var olderId = prevOlder.value;
+        let olderId = prevOlder.value;
+        let old = null;
         try {
-            var old = univers.groupsArr[groupeToWrite].setOlder(olderId);
+             old = univers.groupsArr[groupeToWrite].setOlder(olderId);
         }
         catch (err) {
             if (err.status === "INVALID_OLDER_ID") {
@@ -238,66 +263,51 @@ window.onload = function () {
                 throw err;
             }
         }
-        var older = univers.groupsArr[groupeToWrite].students[old];
+        let older = univers.groupsArr[groupeToWrite].students[old];
         groupeIndex.innerHTML = "GroupeID: " + univers.groupsArr[groupeToWrite].groupNumber + "\n" + "Older: " + older.name;
 
     }
-    var prevX = document.querySelector("#min_rate");
-    var prevY = document.querySelector("#max_rate");
-    var out = document.querySelector(".inform_res");
 
-    get_list.onclick = function () {
-        var min = prevX.value;
-        var max = prevY.value;
-        var outstr = " ";
-        var list = ratingXY(min, max);
-        list.forEach(function (element) {
+    get_list.onclick = () => {
+        let min = prevX.value;
+        let max = prevY.value;
+        let outstr = " ";
+        let list = ratingXY(min, max);
+        list.forEach((element) => {
             outstr += `${element.name}  ${element.surname}, `
         })
         out.innerHTML = "";
         out.innerHTML = outstr;
     }
 
-    var prevRef = document.querySelector("#ref");
-    get_refer.onclick = function () {
-        ref = prevRef.value;
-        var referer = scholarship(ref);
+
+    get_refer.onclick = () => {
+        let ref = prevRef.value;
+        let referer = scholarship(ref);
         out.innerHTML = `Student ${referer.name} ${referer.surname}  /  Rating: ${referer.rating}  /  Scholarship: ${referer.sholship}`
     }
-    var bc = 0;
-    var booksToStudents = function () {
-        libruary.readers.forEach(function (elem, i) {
-            var year = 2017;
-            var giv = libruary.bookToRent(bc, i, `${year + 1}.10.05`);
-            if (giv !== "n/a" && bc < libruary.books.length) {
-                bc++;
-            }
-            else {
-                bc = 0;
-            }
-        })
-    }
-    lib_debt.onclick = function () {
+
+
+    lib_debt.onclick = () => {
         booksToStudents();
-        var data = Date.now();
-        // console.log(now);
-        var debts = [];
-        libruary.readers.forEach(function (element) {
-            for (hr = 0; hr < element.readingBooks.length; hr++) {
-                var preData = element.readingBooks[hr].status;
-                var er = Date.parse(preData);
+        let data = Date.now();
+        let debts = [];
+        libruary.readers.forEach((element) => {
+            for (let hr = 0; hr < element.readingBooks.length; hr++) {
+                let preData = element.readingBooks[hr].status;
+                let er = Date.parse(preData);
                 //  debugger;
                 if (data - er < 31536000000) {
                     debts.push(element);
                 }
             }
         })
-        var outer = "";
-        debts.forEach(function (element) {
-            var summ = element.givBooksPrice();
+        let outer = "";
+        debts.forEach((element) => {
+            let summ = element.givBooksPrice();
             outer += `${element.surname} <em>ID:</em> ${element.studTickNum} <em>DEBT:</em> ${summ} c/i / `
         })
-
+        out.innerHTML = " ";
         out.innerHTML = outer;
     }
 

@@ -4,7 +4,7 @@ var Group = function (students, groupNumber, olderId, lessonTicher) {
     this.groupNumber = groupNumber || 0;
     this.olderId = olderId || 0;
 }
-Group.prototype.createStudent = function (name, surname, patronyme, sex, birthDate, birthPlace, family, studTickNum, hobby, rating) {
+Group.prototype.createStudent = function (name, surname, patronyme, studTickNum, birthDate, birthPlace, family, sex, hobby, rating) {
     var _this = this;
     this.name = name;
     this.surname = surname;
@@ -78,20 +78,20 @@ Group.prototype.createStudent = function (name, surname, patronyme, sex, birthDa
     }
 
     // this.number = this.students.length + 1;
-    this.student = new Student(this.name, this.patronyme, this.surname, this.sex, this.birthDate, this.birthPlace, this.family, this.studTickNum, this.hobby);
-    this.students.push(this.student);
+   // this.student = new Student(this.name, this.patronyme, this.surname, this.sex, this.birthDate, this.birthPlace, this.family, this.studTickNum, this.hobby);
+    this.students.push( new Student(this.name, this.patronyme, this.surname, this.sex, this.birthDate, this.birthPlace, this.family, this.studTickNum, this.hobby));
     // return this.student;
 }
 
 Group.prototype.delStud = function (stud_id) {
-    this.stud_id = stud_id;
+    // this.stud_id = stud_id;
     // var _this = this;
     // var delId = this.students.findIndex(function (el) {
     //      return el[studTickNum] === _this.studTickNum;
     // })
     // this.students.splice(delId, 1);
     //this.stud_id = stud_id;
-    this.students.splice(this.stud_id, 1);
+    this.students.splice(stud_id, 1);
 }
 Group.prototype.setGroupNumber = function (groupNumber) {
     this.groupNumber = groupNumber;
@@ -105,8 +105,8 @@ Group.prototype.addSubj = function (subj, ticher) {
     this.lessonTicher[this.subj] = this.ticher;
 }
 Group.prototype.setOlder = function (studTickNum) {
-    this.studTickNum = studTickNum;
-    var _this = this;
+    // this.studTickNum = studTickNum;
+    //var _this = this;
 
     for (var g = 0; g < this.students.length; g++) {
         if (this.students[g].studTickNum === this.studTickNum) {

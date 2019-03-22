@@ -1,5 +1,5 @@
 
-var Student = function (_name, _surname, _patronyme, _sex, _birthDate, _birthPlace, _family, _studTickNum, _hobby, _rating,_sholship ) {
+var Student = function (_name, _surname, _patronyme,_studTickNum, _birthDate, _birthPlace, _family, _sex,  _hobby, _rating,_sholship ) {
     this.name = _name;
     this.surname = _surname;
     this.patronyme = _patronyme;
