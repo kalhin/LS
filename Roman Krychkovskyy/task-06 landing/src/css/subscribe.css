@@ -1,0 +1,383 @@
+.subscribe {
+    width: 100%;
+    height: auto;
+    background-color: #f5f5fa;
+    display: flex;
+}
+.subscribe-form{
+    width: 35%;
+    margin: 2% 0 10% 10%;
+}
+.subscribe-form__title {
+    font-size: 4vw;
+    margin: 0;
+}
+.subscribe-form__text {
+    font-size: 1.5vw;
+}
+.subscribe-form__mail {
+    width: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 4vw;
+}
+.subscribe-form__input {
+    position: absolute;
+    width: 99%;
+    height: 2.2vw;
+    padding-left: .8vw;
+}
+.subscribe-form__input::-webkit-input-placeholder {
+    color: #20212f;
+    font-size: 1vw;
+}
+.subscribe-form__button {
+    width: 43%;
+    position: absolute;
+    right: 0;
+    text-align: center;  
+    border-radius: 4px;
+    color: #fff;
+    background-color: #23202e;
+    cursor: pointer;
+    font-size: .9vw;
+    padding: 1% 0;
+    user-select: none;
+}
+.subscribe-form__button:active{
+    transform: scale(1.01)
+}
+.subscribe-technology {
+    width: 45%;
+    margin: 12% 0 0 5%;
+}
+.subscribe-technology__title{
+    font-size: 1.5vw;
+}
+.subscribe-technology__blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.subscribe-technology__block {
+    margin-bottom: 7%;
+    width: 13vw;
+    height: 12vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1), 0 20px 40px 0 rgba(48, 178, 84, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: #fff;
+    z-index: 10;
+}
+.subscribe-technology__environment{
+    background-image: url('../img/categories/environment.png');
+}
+.subscribe-technology__technology{
+    background-image: url('../img/categories/technology.png');
+}
+.subscribe-technology__space{
+    background-image: url('../img/categories/space.png');
+}
+.subscribe-technology__physics{
+    background-image: url('../img/categories/physics.png');
+}
+.subscribe-technology__chemistry{
+    background-image: url('../img/categories/chemistry.png');
+}
+.subscribe-technology__brain{
+    background-image: url('../img/categories/brain.png');
+}
+.subscribe-technology__selected{
+    position: absolute;
+    font-size: .9vw;
+    top: 0;
+    display: flex;
+}
+.subscribe-rectangle__1 {
+    position: absolute;
+    width: 17vw;
+    height: 9vw;
+    right: 0;
+    margin-right: 20vw;
+    opacity: 0.2;
+    border-radius: 8px;
+    background-color: #1bcb2c;
+    animation: move_1 25s linear 0s infinite alternate;
+}
+@keyframes move_1 {
+    from {
+        margin-right: 20vw;  
+    } to {
+        margin-right: 80vw;  
+    }
+}
+.subscribe-rectangle__2 {
+    position: absolute;
+    width: 8vw;
+    height: 6vw;
+    opacity: 0.2;
+    right: 0;
+    border-radius: 8px;
+    background-color: #ef5f0a;
+    animation: move_2 5s linear 0s infinite alternate;
+}
+@keyframes move_2 {
+    from {
+        margin-top: 0;
+    } to {
+        margin-top: 30vw;
+    }
+}
+.subscribe-rectangle__3 {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    opacity: 0.2;
+    right: 0;
+    margin: 4vw 17vw 0 0;
+    border-radius: 8px;
+    background-color: #eb1bde;
+    animation: move_3 10s linear 0s infinite alternate;
+}
+@keyframes move_3 {
+      from {
+          transform: rotate(0deg);
+      } to {
+          transform: rotate(360deg);
+      }
+}
+.subscribe-rectangle__4 {
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    opacity: 0.3;
+    right: 0;
+    margin: 10vw 3vw 0 0;
+    border-radius: 8px;
+    background-color: #ffee00;
+    animation: move_4 22s linear 0s infinite alternate;
+}
+@keyframes move_4 {
+    from {
+        margin: 10vw 3vw 0 0;
+    } to {
+        margin: 30vw 50vw 0 0;
+    }
+}
+.subscribe-rectangle__5 {
+    position: absolute;
+    width: 4.5vw;
+    height: 5vw;
+    opacity: 0.2;
+    right: 0;
+    margin-top: 28vw;
+    border-radius: 8px;
+    background-color: #150bf3;
+    animation: move_5 18s linear 0s infinite alternate;
+}
+@keyframes move_5 {
+    from {
+        margin: 28vw 3vw 0 0;
+    } to {
+        margin: 28vw 50vw 0 0;
+    }
+}
+.subscribe-rectangle__6 {
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    opacity: 0.2;
+    right: 0;
+    margin: 32vw 3vw 0 0;
+    border-radius: 8px;
+    background-color: #15dbff;
+}
+.subscribe-rectangle__7 {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    opacity: 0.2;
+    right: 0;
+    margin-top: 40.6vw;
+    border-radius: 8px;
+    background-color: #0efc0e;
+    animation: move_7 18s linear 0s infinite alternate;
+}
+  @keyframes move_7 {
+      from {
+          margin: 40.6vw 3vw 0 0;
+      } to {
+          margin: 40.6vw 70vw 0 0;
+      }
+}
+.subscribe-rectangle__8  {
+    position: absolute;
+    width: 9vw;
+    height: 8vw;
+    opacity: 0.2;
+    margin-top: 39.7vw;
+    border-radius: 8px;
+    background-color: #2dfa13;
+    animation: move_8 5s linear 0s infinite alternate;
+}
+  @keyframes move_8 {
+      from {
+          margin: 39.7vw 0 0 0;
+      } to {
+          margin: 15vw 0 0 0;
+      }
+}
+.subscribe-rectangle__9 {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    margin: 32vw 0 0 5vw;
+    opacity: 0.2;
+    border-radius: 8px;
+    background-color: #2017ee;
+    animation: move_9 10s linear 0s infinite alternate;
+}
+@keyframes move_9 {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(-360deg);
+    }
+}
+@media screen and (max-width:320px){
+    .subscribe {
+        flex-direction: column;
+        align-items: center;
+    }
+    .subscribe-form {
+        width: 90%;
+        order: 1;
+    }
+    .subscribe-form__title {
+        font-size: 6.5vw;
+    }
+    .subscribe-form__text {
+        font-size: 4vw;
+        width: 95%;
+        text-align: justify;
+    }
+    .subscribe-form__mail {
+        width: 93%;
+        margin-top: 7vw;
+    }
+    .subscribe-form__input {
+        position: absolute;
+        width: 100%;
+        height: 6vw;
+        padding-left: 1vw;
+    }
+    .subscribe-form__input::-webkit-input-placeholder {
+        font-size: 4vw;
+    }
+    .subscribe-form__button {
+        width: auto;
+        margin-right: -2.3%;
+        font-size: 4vw;
+        padding: 1% 1%;
+    }
+    .subscribe-technology {
+        width: 90%;
+        margin: 5% 0 0 0;
+    }
+    .subscribe-technology__title{
+        font-size: 4vw;
+    }
+    .subscribe-technology__block {
+        margin-bottom: 7%;
+        width: 48%;
+        height: 42vw;
+        font-size: 4vw;
+    }
+    .subscribe-technology__selected {
+        font-size: 4vw;
+    }
+    .subscribe-rectangle__1 {
+        width: 22vw;
+        height: 15vw;
+    }
+    .subscribe-rectangle__2 {
+        width: 15vw;
+        height: 10vw;
+      }
+    .subscribe-rectangle__3 {
+        width: 18vw;
+        height: 18vw;
+        margin: 9vw 17vw 0 0;
+      }
+    .subscribe-rectangle__4 {
+        width: 14vw;
+        height: 14vw;
+        opacity: 0.3;
+        margin: 55vw 1vw 0 0;
+      }
+    .subscribe-rectangle__5 {
+        width: 10vw;
+        height: 10vw;
+        opacity: 0.3;
+        margin-top: 105vw;
+      }
+    .subscribe-rectangle__6 {
+        width: 12vw;
+        height: 12vw;
+        opacity: .3;
+        margin: 60vw 44vw 0 0;
+        animation: move_6 5s linear 0s infinite alternate;
+    }
+    @keyframes move_6 {
+        from {
+            transform: rotate(0deg)
+        } to {
+            transform: rotate(360deg)
+        }
+  }
+    .subscribe-rectangle__7 {
+        width: 12vw;
+        height: 12vw;
+        opacity: .3;
+        left: 0;
+        margin-top: 110.6vw;
+        animation: move_7 15s linear 0s infinite alternate;
+      }
+      @keyframes move_7 {
+          from {
+              margin: 198vw 0 0 0;
+          } to {
+              margin: 198vw 0 0 55vw;
+          }
+    }
+    .subscribe-rectangle__8  {
+        width: 19vw;
+        height: 18vw;
+        opacity: .3;
+        left: 0;
+        margin: 180vw 0 0 0;
+    }
+    @keyframes move_8 {
+        from {
+            margin: 190vw 0 0 0;
+        } to {
+            margin: 150vw 0 0 0;
+        }
+  }
+    .subscribe-rectangle__9 {
+        width: 22vw;
+        height: 20vw;
+        margin: 165vw 15vw 0 0;
+        right: 0;
+        opacity: 0.2;
+        border-radius: 8px;
+    }
+}

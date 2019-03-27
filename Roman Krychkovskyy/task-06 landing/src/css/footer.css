@@ -1,0 +1,42 @@
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-title{
+    margin-left: 10vw;
+    color: #20212f;
+    font-size: 1.488vw;
+}
+.footer-nav{
+    margin-right: 8vw;
+}
+.footer-nav__link{
+    text-decoration: none;
+    margin-right: 2vw;
+    color: #20212f;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-size: 1.1vw;
+}
+.footer-nav__link:visited{
+    color: #20212f;
+}
+
+@media screen and (max-width:320px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-title{
+        margin: 3vw 0 0 0;
+        font-size: 5vw;
+    }
+    .footer-nav{
+        margin: 0 0 2vw 0;
+    }
+    .footer-nav__link{
+        font-size: 3vw;
+    }
+}

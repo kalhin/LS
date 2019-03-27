@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HW-6-HTML + CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/css/styles.css">
+
+    <!-- <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/slider.css">
+    <link rel="stylesheet" href="src/css/content.css">
+    <link rel="stylesheet" href="src/css/subscribe.css">
+    <link rel="stylesheet" href="src/css/footer.css"> -->
+
+    <!-- for slider -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
+
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="header-nav">
+            <input class="header-nav__checkbox" type="checkbox" id="burger">
+            <label class="header-nav__menu" for="burger">Меню</label>
+            <div class="header-nav__logo">
+                UpsideDown
+            </div>
+            <ul class="header-nav__list" id="header-navigation">
+                <li class="header-nav__item">
+                    <a href="#environment" class="header-nav__link">environment</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="#technology" class="header-nav__link">technology</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="#space" class="header-nav__link">space</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="#physics" class="header-nav__link">physics</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="#chemistry" class="header-nav__link">chemistry</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="#brain" class="header-nav__link">the brain</a>
+                </li>
+                <li class="header-nav__search"></li>
+                <li class="header-nav__ring"></li>
+            </ul>
+        </nav>
+        <div class="header-title">
+            <h3 class="header-title__h3">top stories</h3>
+            <h1 class="header-title__h1">
+                The World's Oceans Are<br>
+                Warming 13% Faster<br>
+                Than Previously Thought
+            </h1>
+            <h5 class="header-title__h5">Continue reading</h5>
+        </div>
+        <ul class="header-footer">
+            <li class="header-footer__item">
+                01<br>
+                This Hair Dye Changes Color Depending On The Temperature Around You
+            </li>
+            <li class="header-footer__item">
+                02<br>
+                This Terrifying Video Shows One Of The Most Dangerous Threats Facing Humanity
+            </li>
+            <li class="header-footer__item">
+                03<br>
+                Astronomers Released 3D Map Of The Milky Way's Dust
+            </li>
+        </ul>
+    </header>
+    <section class="slider">
+        <div class="slider-body">
+            <h4 class="slider-title">TRENDING NOW</h4>
+            <div class="slider-body__slide slide">
+                <div class="slider-body__block">
+                    <img src="dist/img/slider/slide1.png" alt="TECHNOLOGY">
+                    <h4 style="color: #171cf0" class="slider-body__title">TECHNOLOGY</h4>
+                    <p class="slider-body__text">
+                        Here's The Simple Trick To Look Your Best In Selfies From Your Smartphone
+                    </p>
+                </div>
+                <div class="slider-body__block">
+                    <img src="dist/img/slider/slide2.png" alt="ENVIRONMENT">
+                    <h4 style="color: #30b254" class="slider-body__title">ENVIRONMENT</h4>
+                    <p class="slider-body__text">
+                        An Astronaut's View Of Mount Etna's Recent Volcanic Eruption
+                    </p>
+                </div>
+                <div class="slider-body__block">
+                    <img src="dist/img/slider/slide3.png" alt="PHYSICS">
+                    <h4 style="color: #12c9cd" class="slider-body__title">PHYSICS</h4>
+                    <p class="slider-body__text">
+                        An Underground Instrument Will Measure How Much Earth Drags Spacetime
+                    </p>
+                </div>
+                <div class="slider-body__block">
+                    <img src="dist/img/slider/slide4.png" alt="CHEMISTRY">
+                    <h4 style="color: #bd16ce" class="slider-body__title">CHEMISTRY</h4>
+                    <p class="slider-body__text">
+                        The First Life Forms Might Not Have Needed Phosphate
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <h4 class="content-title">RECENT ARTICLES</h4>
+        <div class="content-box"  id="physics">
+            <img src="src/img/chemistry.png" alt="chemistry" class="content-box__img">
+            <div class="content-box__text">
+                <h4 style="color: #bd16ce" class="content-box__science">PHYSICS</h4>
+                <h2 class="content-box__title">Scientists May Have Discovered A New State Of Liquid Water</h2>
+                <p class="content-box__paragraph">
+                    Scientists say they have found a strange transition state in liquid water.
+                    The findings were published in the International Journal of Nanotechnology.
+                </p>
+                <div class="content-box__line"></div>
+                <div class="content-box__date">
+                    <h5>MARCH 27, 2017</h5>
+                    <h5>8 min read</h5>
+                </div>
+            </div>
+        </div>
+        <div class="content-box"  id="chemistry">
+            <img src="src/img/physics.png" alt="physics" class="content-box__img">
+            <div class="content-box__text">
+                <h4 style="color: #12c9cd" class="content-box__science">CHEMISTRY</h4>
+                <h2 class="content-box__title">Time Crystals: How Scientists Created A New State Of Matter</h2>
+                <p class="content-box__paragraph">
+                    Some of the most profound predictions in theoretical physics, such as Einstein’s
+                    gravitational waves or Higgs’ boson, have taken decades to prove…
+                </p>
+                <div class="content-box__line"></div>
+                <div class="content-box__date">
+                    <h5>MARCH 27, 2017</h5>
+                    <h5>5 min read</h5>
+                </div>
+            </div>
+        </div>
+        <div class="content-box"  id="technology">
+            <img src="src/img/technology.png" alt="technology" class="content-box__img">
+            <div class="content-box__text">
+                <h4 style="color: #171cf0" class="content-box__science">TECHNOLOGY</h4>
+                <h2 class="content-box__title">Solar Power Installations Grew Almost 50 Percent in 2016</h2>
+                <p class="content-box__paragraph">
+                    Solar energy had a big year in 2016. A report released at the Brussels
+                    SolarPower Summit confirms that 76.1 Gigawatts of solar were installed…
+                </p>
+                <div class="content-box__line"></div>
+                <div class="content-box__date">
+                    <h5>MARCH 27, 2017</h5>
+                    <h5>4 min read</h5>
+                </div>
+            </div>
+        </div>
+        <div class="content-box" id="environment">
+            <img src="src/img/environment.png" alt="environment" class="content-box__img">
+            <div class="content-box__text">
+                <h4 style="color: #30b254" class="content-box__science">ENVIRONMENT</h4>
+                <h2 class="content-box__title">The Quake That'll Take Out Los Angeles May Be Around The Corner</h2>
+                <p class="content-box__paragraph">
+                    The United States Geological Survey (USGS) has ominously said that Southern
+                    California is overdue for a major earthquake along the Grapevine just…
+                </p>
+                <div class="content-box__line"></div>
+                <div class="content-box__date">
+                    <h5>MARCH 27, 2017</h5>
+                    <h5>9 min read</h5>
+                </div>
+            </div>
+        </div>
+        <div class="content-box" id="space">
+            <img src="src/img/space.png" alt="space" class="content-box__img">
+            <div class="content-box__text">
+                <h4 style="color: #3274ff" class="content-box__science">SPACE</h4>
+                <h2 class="content-box__title">Missing Galaxies Might Be Found By Studying The Ultraviolet Universe</h2>
+                <p class="content-box__paragraph">
+                    Global emissions of carbon dioxide stayed constant for the third year in a row,
+                    despite a growth in the economy.
+                </p>
+                <div class="content-box__line"></div>
+                <div class="content-box__date">
+                    <h5>MARCH 27, 2017</h5>
+                    <h5>5 min read</h5>
+                </div>
+            </div>
+        </div>
+        <div class="content-button">
+            MORE ARTICLES
+        </div>
+    </section>
+    <section class="subscribe" id="brain">
+        <div class="subscribe-form">
+            <h2 class="subscribe-form__title">
+                News Tailored to Your Taste
+            </h2>
+            <p class="subscribe-form__text">
+                Select any category, which looks interesting to you for receiving your personazlied
+                article selection at the beginning of each week.
+            </p>
+            <div class="subscribe-form__mail">
+                <input class="subscribe-form__input" type="text" placeholder="beamazing@gmail.com">
+                <div class="subscribe-form__button">YEAH, LET’S DO IT!</div>
+            </div>
+        </div>
+        <div class="subscribe-technology">
+            <h4 class="subscribe-technology__title">PICK CATEGORIES YOU LIKE</h4>
+            <div class="subscribe-technology__blocks">
+                <div class="subscribe-technology__block subscribe-technology__environment">
+                    <span class="subscribe-technology__selected">SELECTED</span>
+                    <p>ENVIRONMENT</p>
+                </div>
+                <div class="subscribe-technology__block subscribe-technology__technology">
+                    <p>TECHNOLOGY</p>
+                </div>
+                <div class="subscribe-technology__block subscribe-technology__space">
+                    <p>SPACE</p>
+                </div>
+                <div class="subscribe-technology__block subscribe-technology__physics">
+                    <span class="subscribe-technology__selected">SELECTED</span>
+                    <p>PHYSICS</p>
+                </div>
+                <div class="subscribe-technology__block subscribe-technology__chemistry">
+                    <span class="subscribe-technology__selected">SELECTED</span>
+                    <p>CHEMISTRY</p>
+                </div>
+                <div class="subscribe-technology__block subscribe-technology__brain">
+                    <p>THE BRAIN</p>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe-rectangle__1"></div>
+        <div class="subscribe-rectangle__2"></div>
+        <div class="subscribe-rectangle__3"></div>
+        <div class="subscribe-rectangle__4"></div>
+        <div class="subscribe-rectangle__5"></div>
+        <div class="subscribe-rectangle__6"></div>
+        <div class="subscribe-rectangle__7"></div>
+        <div class="subscribe-rectangle__8"></div>
+        <div class="subscribe-rectangle__9"></div>
+    </section>
+    <footer class="footer">
+        <h3 class="footer-title">UpsideDown</h3>
+        <nav class="footer-nav" id="footer-navigation">
+            <a href="#header" class="footer-nav__link">ABOUT</a>
+            <a href="#header" class="footer-nav__link">ADVERTISING</a>
+            <a href="#header" class="footer-nav__link">PRIVACY</a>
+            <a href="#header" class="footer-nav__link">PRESS</a>
+            <a href="#header" class="footer-nav__link">CONTACT</a>
+        </nav>
+    </footer>
+    <script src="dist/js/scripts.js"></script>
+    <script src="gulpfile.js"></script>
+</body>
+
+</html>
