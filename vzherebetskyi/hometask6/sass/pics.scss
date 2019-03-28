@@ -1,0 +1,88 @@
+.background {
+    width: 1300px;
+    height: 1105px;
+    margin:auto;
+    background: url("../img/background.png");
+    @media screen and (max-width: 1200px) {
+          background: lightblue;
+          height: 500px;
+    }
+}
+
+.background-2 {
+    width: 1300px;
+    height: 453px;
+    margin:auto;
+    padding-top: 120px;
+    background: url("../img/slide.png");
+    @media screen and (max-width: 1200px) {
+          background: lightblue; 
+    }
+    text-align:center;
+}
+
+.background-3 {
+    width: 1300px;
+    height: 571px;
+    margin:auto;
+    padding-top: 120px;
+    background: url("../img/plane.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 1200px) {
+          background: lightblue; 
+    }
+    display: flex;
+}
+
+.pic1 {
+    width: 400px;
+    height: 440px;
+    position: relative;
+    cursor: pointer;
+}
+
+.backdrop {
+    width: 520px;
+    height: 382px;
+    position: relative;
+    cursor: pointer;
+}
+
+.pic2.backdrop {
+    background-image: url("../img/image_2.png");
+}
+
+.rectangle1 {
+    border-radius: 8px;
+    border: solid 1px #979797;
+    mix-blend-mode: multiply;
+    background-image: linear-gradient(to bottom, #43cff3, #43cff3);
+    width: 400px;
+    height: 150px;
+    @media screen and (max-width: 1200px) {
+        width: 200px;
+        height: 220px;
+        background-image: none;
+        mix-blend-mode: unset;
+    }
+    position: absolute;
+    bottom: 0px;
+}
+
+.rectangle-2 {
+    border-radius: 8px;
+    border: solid 1px #979797;
+    mix-blend-mode: multiply;
+    background-image: linear-gradient(to bottom, #43cff3, #43cff3);
+    width: 520px;
+    height: 382px;
+    @media screen and (max-width: 1200px) {
+        width: 200px;
+        height: 220px;
+        background-image: none;
+        mix-blend-mode: unset;
+    }
+    position: absolute;
+    bottom: 0px;
+}
