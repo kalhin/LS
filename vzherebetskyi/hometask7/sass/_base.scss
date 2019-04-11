@@ -1,0 +1,102 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: lightgray;
+}
+
+
+.col {
+  @media screen and (max-width: 700px) {
+        padding: 0 0 0 0 !important;
+  } 
+}
+
+.row-1 {
+  padding-top: 5%;
+  max-width: 1300px;
+  @media screen and (max-width: 700px) {
+        margin: 0;
+  }
+  @media screen and (max-width: 500px) {
+    margin-left: -18%;
+  }
+}
+
+.row-1 p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  display: inline-block;
+  @media screen and (max-width: 1200px) {
+      font-size: 15px; 
+  }
+}
+
+.row-1 img {
+  @media screen and (max-width: 500px) {
+    display: none;
+}
+}
+
+.row-2 {
+    padding-top:40px;
+    width: 1300px;
+    height: 400px;
+    margin:auto;
+    background: white;
+    @media screen and (max-width: 1200px) {
+            height: 250px;
+    }
+}
+
+.row-2 p {
+    text-align:center;
+    font-size: 30px;
+    @media screen and (max-width: 1200px) {
+        font-size: 20px;
+   }
+}
+
+.departures {
+    padding: 15px 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #43cff3;
+    @media screen and (max-width: 1200px) {
+        font-size: 15px;
+        padding: 12px 0 0 0;
+    }
+    @media screen and (max-width: 500px) {
+        padding: 12px 0 0 5%;
+    }
+}
+
+.hotel {
+    padding: 15px 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #555555;
+    @media screen and (max-width: 1200px) {
+        font-size: 15px;
+        padding: 12px 0 0 0;
+   }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+li {
+    float: left;
+} 

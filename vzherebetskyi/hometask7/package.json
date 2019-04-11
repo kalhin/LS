@@ -1,0 +1,39 @@
+{
+  "name": "hometask6",
+  "version": "1.0.0",
+  "description": "introduction to React",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel src/app.js --out-file=script.js --presets=env,react --watch",
+    "version": "babel-cli -v",
+    "webpack": "webpack --watch"
+  },
+  "author": "Volodymyr Zherebetskyi",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-loader": "7.1.1",
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1",
+    "bootstrap": "^4.3.1",
+    "css-loader": "0.28.1",
+    "jquery": "^3.3.1",
+    "node-sass": "4.5.3",
+    "popper.js": "^1.15.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.18.2",
+    "webpack": "3.1.0",
+    "webpack-dev-server": "2.5.1"
+  },
+  "devDependencies": {
+    "adjust-sourcemap-loader": "^2.0.0",
+    "file-loader": "^3.0.1",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "resolve-url-loader": "3.0.0"
+  }
+}
